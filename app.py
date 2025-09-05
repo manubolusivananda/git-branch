@@ -1,18 +1,8 @@
-import os
-from flask import Flask, request, jsonify, send_from_directory
-from flask_cors import CORS
-from joblib import load
-from sqlalchemy import create_engine, text
-from datetime import datetime
+
 
 # -----------------------------
 # Database config
 # -----------------------------
-DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    "mysql+pymysql://admin:manubolusivananda@database-1.c32awucyihk7.us-west-1.rds.amazonaws.com:3306/paddy_disease_db"
-)
-engine = create_engine(DATABASE_URL, future=True)
 
 # -----------------------------
 # Load ML model
